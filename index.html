@@ -28,6 +28,7 @@
         <tr>
           <th class="id">No.</th>
           <th class="comment">コメント</th>
+          <th class="deadline">期限</th>
           <th class="state">状態</th>
           <th class="button"></th>
         </tr>
@@ -38,6 +39,7 @@
           <!-- 要素のデータが入る -->
           <th>{{ item.id }}</th>
           <td>{{ item.comment }}</td>
+          <td>{{ item.deadline}}</td>
           <td class="state">
             <!-- 状態変更のボタン -->
             <button v-on:click="doChangeState(item)">
@@ -57,7 +59,10 @@
 
     <h2>新しい作業の追加</h2>
     <form class="add-form" v-on:submit.prevent="doAdd">
-      コメント<input type="text" ref="comment">
+      <label for="comment">コメント</label>
+      <input type="text" id="comment" ref="comment" >
+      <label for="deadline">期限</label>
+      <input type="date" id="deadline" pattern="\d{4}-\d{2}-\d{2}" ref="deadline" >
       <button type="submit">追加</button>
     </form>
     <!-- new sign up form -->

@@ -61,15 +61,18 @@ const app = new Vue({
     // create
     doAdd: function() {
       let comment = this.$refs.comment;
+      let deadline = this.$refs.deadline;
       if(!comment.value.length) {
         return;
       }
       this.todos.push({
         id: todoStrage.uid++,
         comment: comment.value,
+        deadline: deadline.value,
         state: 0,
       });
       comment.value = '';
+      deadline.value = '';
     },
     // update
     doChangeState: function(item) {

@@ -14,11 +14,11 @@ table {
   border-collapse: collapse;
 }
 thead th {
-  border-bottom: 2px solid #0099e4; /*#d31c4a */
+  border: 2px solid #0099e4; /*#d31c4a */
   color: #0099e4;
 }
 th,
-th {
+td {
   padding: 0 8px;
   line-height: 40px;
 }
@@ -36,7 +36,7 @@ tbody td.button, tbody td.state {
 }
 tbody tr td,
 tbody tr th {
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
   transition: all 0.4s;
 }
 tbody tr.done td,
@@ -56,4 +56,14 @@ button {
   background: #0099e4;
   color: #fff;
   cursor: pointer;
+}
+.add-form {
+  display: flex;
+  align-items: center;
+}
+.add-form label{
+  margin-right: 1rem;
+}
+.add-form input{
+  margin-right: 2rem;
 }
